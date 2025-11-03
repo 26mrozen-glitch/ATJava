@@ -1,5 +1,6 @@
 
 // I used ChatGPT to help with the output formatting as well as how to go about completeing the discount calculations after struggling with them for a bit.
+// I had Mr.Eng help with formatting the base price. 
 
 import java.util.Scanner;
 
@@ -50,10 +51,10 @@ public class ProgrammingProject {
                 }
             }
             
+            // Determine base price
             double basePrice = 0.0;
             double ageDiscount = 0.0;
             double studentDiscount = 0.0;
-            
         
             if (day.equals ("SAT") || day.equals("SUN")) {
                 basePrice = 80.00;
