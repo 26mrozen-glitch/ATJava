@@ -1,6 +1,6 @@
 public class PartC {
     public static void main(String[] args) {
-        int count = 1000; // Change to 1000 later
+        int count = 10; // Change to 1000 later
         int sum = 0;
 
         for (int i = 0; i < count; i++) {
