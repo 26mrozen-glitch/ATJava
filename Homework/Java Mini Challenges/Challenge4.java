@@ -1,3 +1,5 @@
+// I used chat gpt to help me with the progress bar formatting.
+
 import java.util.Scanner;
 
 public class Challenge4 {
