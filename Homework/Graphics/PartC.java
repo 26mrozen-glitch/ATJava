@@ -1,3 +1,5 @@
+// I used Chatgpt to help me with the scale and to make sure it fit the 400x400 window.
+
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.*;
