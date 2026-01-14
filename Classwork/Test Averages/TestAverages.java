@@ -1,5 +1,6 @@
 import java.util.Scanner;
-//I had soeme help from chatgpt to complete the part of the program for it to recognize that when 'q' is entered it will quit the program
+//I had soeme help from chatgpt to complete the part of the program for it to recognize that when 'q' is entered it will quit the program and when i list out the scores just to make it look cleaner and easier to follow
+
 
 public class TestAverages {
     public static void main(String[] args) {
