@@ -70,10 +70,10 @@ public class modified {
         }
 
         for (int i = targetIndex; i < currentSize - 1; i++) {
-            array[i] = array[i + 1]; // shift elements left
+            array[i] = array[i + 1]; 
         }
-        array[currentSize - 1] = 0; // optional: clear last element
-        return currentSize - 1; // updated size
+        array[currentSize - 1] = 0; /
+        return currentSize - 1; 
     }
 
     // Part B: Insert method
@@ -88,13 +88,13 @@ public class modified {
             return currentSize;
         }
 
-        // Shift elements to the right to make space
+        
         for (int i = currentSize; i > targetIndex; i--) {
             array[i] = array[i - 1];
         }
 
         array[targetIndex] = newElement;
-        return currentSize + 1; // updated size
+        return currentSize + 1; 
     }
 
     // Helper method to print scores neatly
