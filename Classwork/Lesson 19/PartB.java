@@ -1,4 +1,4 @@
-// 
+// I had ChatGPT assist with reading from a file, writing to a file, and formatting output.
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -11,20 +11,20 @@ public class PartB {
             File inputFile = new File("quizzes.txt");
             Scanner input = new Scanner(inputFile);
 
-            // used internet specifically here to figure out how to write to a file
+            // used Chat specifically here to figure out how to write to a file
             PrintWriter output = new PrintWriter("quizzesMod.txt");
 
             int quizNumber = 0;
             double total = 0;
             int count = 0;
 
-            // Read quiz scores
+           
             while (input.hasNextDouble()) {
                 double score = input.nextDouble();
                 total += score;
                 count++;
 
-                // Write formatted quiz line
+                
                 output.printf("Quiz %03d: %7.2f%n", quizNumber, score);
                 quizNumber++;
             }

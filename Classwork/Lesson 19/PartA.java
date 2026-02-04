@@ -1,3 +1,5 @@
+// I had ChatGPT assist with reading integers from a file and tracking the lowest value.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ public class PartA {
                 }
             }
 
-            // Close the file
+            
             input.close();
 
             // Print temperatures and mark lowest
