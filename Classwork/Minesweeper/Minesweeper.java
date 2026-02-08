@@ -1,3 +1,5 @@
+// I used ChatGPT as a support tool to help clarify logic, debug specific issues, and improve the structure of certain parts of the code (such as method organization, bounds checking, and input handling)
+
 import java.util.Scanner;
 import java.util.Random;
 
