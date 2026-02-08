@@ -1,3 +1,5 @@
+// I used ChatGPT to help refine my printf formatting so the columns aligned correctly and matched the required sample output. I also used it to review my file parsing logic (split, trim, parseDouble, parseInt) to ensure I was extracting and converting the data correctly.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -6,7 +8,7 @@ public class PartA {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        File file = new File("Top5Unemployment.txt"); // your file name
+        File file = new File("Top5Unemployment.txt");
         Scanner scanner = new Scanner(file);
 
         System.out.println("---------------------------------------------------------------");
@@ -32,3 +34,6 @@ public class PartA {
         scanner.close();
     }
 }
+
+
+
