@@ -1,3 +1,5 @@
+//I used ChatGPT to help me format the program correctly, use Integer.parseInt() to convert a String to an int, and implement a try–catch statement to handle the NumberFormatException when the birth year was listed as n/a.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

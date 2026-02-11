@@ -1,3 +1,5 @@
+//I used ChatGPT to help me understand how to repeatedly prompt the user for a filename, handle the FileNotFoundException, and properly read and display each word from a file using the Scanner class.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
