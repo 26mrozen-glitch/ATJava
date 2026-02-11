@@ -1,4 +1,4 @@
-// I used ChatGPT as a support tool to help clarify logic, debug specific issues, and improve the structure of certain parts of the code (such as method organization, bounds checking, and input handling)
+// I used ChatGPT to help me with a few specific parts of this program, including placing mines randomly without overlapping, converting the mine count from an integer to a character using (char)(count + '0'), and fixing some Scanner input issues. I also used it to check parts of my game logic to make sure the win condition and bounds checking were working correctly.
 
 import java.util.Scanner;
 import java.util.Random;
@@ -32,7 +32,7 @@ public class Minesweeper {
 
             } else if (command.equals("c")) {
                 printBoard(map);
-                sc.nextLine(); // consume leftover newline
+                sc.nextLine(); 
                 System.out.println("press enter to continue...");
                 sc.nextLine();
 
