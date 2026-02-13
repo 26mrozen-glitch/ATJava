@@ -1,3 +1,5 @@
+// I used ChatGPT to help clarify how to properly throw a NumberFormatException when the input is either outside the allowed range (0–100) or cannot be parsed into an integer. Specifically, I received guidance on structuring the try-catch block inside the method and on demonstrating exception handling in the main method using a try-catch statement.
+
 import java.util.Scanner;
 
 public class PartA {
