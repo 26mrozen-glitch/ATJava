@@ -1,3 +1,5 @@
+// I used the internet and ChatGPT to help me understand how to use the java.time package to get the current date and time.
+
 // Package: java.time
 // Parent package: java
 
