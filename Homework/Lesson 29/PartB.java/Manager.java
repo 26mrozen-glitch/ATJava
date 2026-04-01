@@ -1,3 +1,5 @@
+//I used the internet and ChatGPT to help me understand how to extend a class and override methods.
+
 public class Manager extends Employee {
     private double bonus;
 
@@ -10,7 +12,7 @@ public class Manager extends Employee {
     // Override getAnnualIncome to include bonus
     @Override
     public double getAnnualIncome() {
-        return getSalary() + bonus;  // getSalary() is inherited from Employee
+        return getSalary() + bonus;  // getsalary is inherited from Employee
     }
 }
 

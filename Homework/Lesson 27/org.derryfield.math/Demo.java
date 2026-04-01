@@ -1,3 +1,5 @@
+// I used the internet and ChatGPT to help me understand how to call methods from another class and use the Scanner for input. Not sure why but my package keeps throwing an error.
+
 package org.derryfield.math;
 
 import java.util.Scanner;
