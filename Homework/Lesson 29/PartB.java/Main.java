@@ -1,3 +1,5 @@
+// I used the internetand ChatGPT to help me understand inheritance and how to override methods. I also used it to check formatting.
+
 public class Main {
     public static void main(String[] args) {
         
