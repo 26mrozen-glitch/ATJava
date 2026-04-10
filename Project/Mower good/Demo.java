@@ -1,17 +1,25 @@
-// I used ChatGPT and internet resources to help understand how to take user input, create an object from another class, and display the output. I used this guidance to write and organize the demo program myself.
-
 import Mow.Yard;
+import Mow.Mower;
 import java.util.Scanner;
 
 public class Demo {
 
+    // Clear screen for animation
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
+    // Delay execution (milliseconds)
+    public static void delay(long ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted");
+        }
+    }
+
     public static void main(String[] args) {
-        clearScreen();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -23,14 +31,29 @@ public class Demo {
 
         System.out.println();
 
-        // Create and display the yard
+        // Create the yard
         Yard yard = new Yard(height, width);
-        yard.printYard(); 
 
+        // --- Place mower on left side (row 1 inside border, col 1 inside border) ---
+        Mower mower = new Mower(1, 1, 1); // facing right
+
+        // Animation loop
+        while (true) {
+
+            mower.cutGrass(yard);       // cut grass under mower
+            yard.printYard(mower);      // print yard with mower
+            delay(500);                 // wait half a second
+
+            // Stop before hitting right wall (yard width + 1 because of border)
+            if (mower.getCol() == yard.getLawnWidth()) {
+                break;
+            }
+
+            mower.moveForward();        // move mower one cell forward
+        }
+
+        System.out.println("\nMowing complete!");
         scanner.close();
     }
 }
-
-
-
 
