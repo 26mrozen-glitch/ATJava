@@ -37,23 +37,22 @@ public class Demo {
         // --- Place mower on left side (row 1 inside border, col 1 inside border) ---
         Mower mower = new Mower(1, 1, 1); // facing right
 
+        mower.randomize(yard);
         // Animation loop
         while (true) {
 
-            mower.cutGrass(yard);       // cut grass under mower
-            yard.printYard(mower);      // print yard with mower
-            delay(500);                 // wait half a second
+    clearScreen();
+    yard.printYard(mower);
+    delay(200);
 
-            // Stop before hitting right wall (yard width + 1 because of border)
-            if (mower.getCol() == yard.getLawnWidth()) {
-                break;
-            }
-
-            mower.moveForward();        // move mower one cell forward
-        }
-
+    if (!mower.updateMower(yard)) {
+        break;
+    }
+}
         System.out.println("\nMowing complete!");
         scanner.close();
     }
 }
+
+
 

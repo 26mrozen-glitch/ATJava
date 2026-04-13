@@ -1,5 +1,7 @@
 package Mow;
 
+import java.util.Random;
+
 public class Mower {
 
     // Position of the mower
@@ -66,14 +68,77 @@ public class Mower {
         yard.setCell(row, col, ' ');
     }
 
-    // Returns a character representing the mower's direction
-    public char getDirectionChar() {
-        return switch (direction) {
-            case 0 -> '^';
-            case 1 -> '>';
-            case 2 -> 'v';
-            case 3 -> '<';
-            default -> '?';
-        };
+// Returns a character representing the mower's direction
+public char getDirectionChar() {
+    return switch (direction) {
+        case 0 -> '^';
+        case 1 -> '>';
+        case 2 -> 'v';
+        case 3 -> '<';
+        default -> '?';
+    };
+}
+
+public void randomize(Yard yard) {
+        Random rand = new Random();
+
+        int maxRow = yard.getLawnHeight();
+        int maxCol = yard.getLawnWidth();
+
+        int corner = rand.nextInt(4);
+
+        if (corner == 0) { row = 1; col = 1; }
+        else if (corner == 1) { row = 1; col = maxCol; }
+        else if (corner == 2) { row = maxRow; col = 1; }
+        else { row = maxRow; col = maxCol; }
+
+        direction = rand.nextInt(4);
+    }
+
+    // helper method (also inside Mower)
+    private char look(int dir, Yard yard) {
+        int r = row;
+        int c = col;
+
+        if (dir == 0) r--;
+        else if (dir == 1) c++;
+        else if (dir == 2) r++;
+        else if (dir == 3) c--;
+
+        return yard.getCell(r, c);
+    }
+
+    public boolean updateMower(Yard yard) {
+
+        // cut current spot
+        if (yard.getCell(row, col) == '+') {
+            cutGrass(yard);
+            return true;
+        }
+
+        // forward
+        if (look(direction, yard) == '+') {
+            moveForward();
+            return true;
+        }
+
+        // right
+        int rightDir = (direction + 1) % 4;
+        if (look(rightDir, yard) == '+') {
+            turnRight();
+            moveForward();
+            return true;
+        }
+
+        // left
+        int leftDir = (direction + 3) % 4;
+        if (look(leftDir, yard) == '+') {
+            turnLeft();
+            moveForward();
+            return true;
+        }
+
+        return false; // done
     }
 }
+
