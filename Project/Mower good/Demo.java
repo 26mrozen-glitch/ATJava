@@ -1,3 +1,5 @@
+// I used ChatGPT and online resources to help understand how to take user input, create and use objects from different classes, and control the flow of the program. I also used these resources to learn how to animate the mower using a loop, clear the screen, and add delays between movements.
+
 import Mow.Yard;
 import Mow.Mower;
 import java.util.Scanner;
@@ -34,11 +36,11 @@ public class Demo {
         // Create the yard
         Yard yard = new Yard(height, width);
 
-        // --- Place mower on left side (row 1 inside border, col 1 inside border) ---
+        // Place mower on left side (row 1 inside border, col 1 inside border)
         Mower mower = new Mower(1, 1, 1); // facing right
 
         mower.randomize(yard);
-        // Animation loop
+        // Animation loop(PART C)
         while (true) {
 
     clearScreen();
@@ -53,6 +55,3 @@ public class Demo {
         scanner.close();
     }
 }
-
-
-
