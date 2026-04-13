@@ -1,3 +1,5 @@
+// I used ChatGPT and online resources to help understand the overall structure and requirements of this multi-part project, including how to represent a yard using a 2D array, how to design the Mower class with movement and direction, and how to implement methods that allow the mower to interact with the yard. I also used these resources to better understand how to animate the program and develop the algorithm for the mower’s decision-making process, including randomizing its starting position and updating its movement to mow the lawn efficiently. Using this guidance, I wrote, organized, and adjusted the final code myself to meet all the requirements of Parts A, B, and C.
+
 package Mow;
 
 import java.util.Random;
@@ -78,7 +80,7 @@ public char getDirectionChar() {
         default -> '?';
     };
 }
-
+// PART C
 public void randomize(Yard yard) {
         Random rand = new Random();
 

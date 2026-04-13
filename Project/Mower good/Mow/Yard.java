@@ -1,3 +1,4 @@
+// I used ChatGPT and online resources to better understand how to represent the yard using a 2D array, including how to initialize the red brick borders and unmowed grass. I also used these resources to help design methods for accessing and modifying individual cells, calculating the lawn dimensions, and updating the print method to display the mower within the yard.
 package Mow;
 
 public class Yard {
