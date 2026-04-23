@@ -1,3 +1,5 @@
+//I used ChatGPT to help with the random generation and formatting the cards.
+
 import java.util.Random;
 
 public class Card {

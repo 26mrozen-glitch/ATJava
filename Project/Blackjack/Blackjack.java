@@ -1,3 +1,5 @@
+// I had to use ChatGPT to learn how to play blackjack and to help with the formatting of the cards.
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
